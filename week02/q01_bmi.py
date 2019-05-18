@@ -16,3 +16,15 @@ except:
 
 bmi = weight / (height / 100) ** 2
 print(bmi)
+"""
+18.5 미만: 저체중
+18.5 이상 23 미만 : 정상체중
+23 이상: 과체중
+"""
+if bmi < 18.5:
+    print("저체중")
+elif (bmi >= 18.5) and (bmi < 23):
+    print("정상체중")
+else :
+    print("과체중")
+
