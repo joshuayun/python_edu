@@ -18,6 +18,7 @@ while True:
     # 1번을 선택했을 때 - 원리금 계산
     # 2번을 선택했을 때 - 프로그램을 종료한다 - exit()
 
+
     if menu == '1':
         # 원리금 계산 로직
         # Todo: 함수로 코드 단순화 하기, 모듈화 하기
@@ -52,8 +53,10 @@ while True:
                 print("거치기간을 다시 입력하세요.")
         #원리금 = 원금(1 + 연이율 / 이자지급횟수) ^ (이자지급횟수 * 거치기간)
         final_balance = balance * (1 + ((interest/100) / number_of_count)) ** (number_of_count * number_of_year)
-        print("최종원리금은 %d원 입니다." % (final_balance))
 
+        format_string = "원금이 {:,d}원, 연이율 {:,.2f}%, 연지급횟수 {:,d}회인 예금에 {:,d}년 동안 예금을 해두면 최종원리금 {:,.2f}원 입니다."
+        message_string = format_string.format(balance, interest, number_of_count, number_of_year, final_balance)
+        print(message_string)
 
     elif menu == '2':
         print("프로그램을 종료합니다.")
