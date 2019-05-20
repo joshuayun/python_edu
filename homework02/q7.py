@@ -17,3 +17,31 @@
 제곱 미터 = 제곱 피트 * 0.09290304
 입니다.
 """
+
+
+while True:
+    room_width = input("방의 길이는 몇 피트 입니까? :")
+    try:
+        room_width = int(room_width)
+        if room_width > 0:
+            break
+    except:
+        print("방의 길이가 올바르지 않습니다. 재입력하세요.")
+while True:
+    room_height = input("방의 너비는 몇 피트 입니까? :")
+    try:
+        room_height = int(room_height)
+        if room_height > 0:
+            break
+    except:
+        print("방의 너비가 올바르지 않습니다. 재입력하세요.")
+
+
+room_area = room_width * room_height
+
+room_area_meter = room_area * 0.09290304
+room_area_meter = round(room_area_meter, 3)
+
+format_string = "당신이 입력한 수치는 {}, {} 피트입니다.\n면적은\n{} 제곱 피트\n{} 제곱 미터\n입니다."
+message_string = format_string.format(room_width, room_height, room_area, room_area_meter)
+print(message_string)

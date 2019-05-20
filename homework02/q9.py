@@ -6,7 +6,7 @@
 (* 페인트는 무조건 1 리터 단위로 구매해야합니다.)
 입출력 예시 :
 입력 화면 –
-칠할 전창의 넓이를 입력하세요 : 10
+칠할 천창의 넓이를 입력하세요 : 10
 출력 화면 –
 10 제곱미터의 천장을 칠하는데 2 리터의 페인터가 필요합니다.
 추가 내용 :
@@ -14,3 +14,20 @@
 해보세요.
 출력값은 올림해서 정수단위로 출력되도록 하세요.
 """
+import math
+
+while True:
+    try:
+        ceil_width = input("칠할 천창의 넓이를 입력하세요 : ")
+        ceil_width = int(ceil_width)
+        if ceil_width > 0:
+            break
+    except:
+        print("천장의 넓이가 올바르지 않습니다. 재입력하세요.")
+
+paint = math.ceil(ceil_width / 9)
+
+
+format_string = "{} 제곱미터의 천장을 칠하는데 {} 리터의 페인터가 필요합니다."
+message_string = format_string.format(ceil_width, paint)
+print(message_string)

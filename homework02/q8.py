@@ -16,3 +16,34 @@
 모든 입력은 숫자만 입력되어야 합니다. 숫자가 아닌 글자가 입력되면 다시 입력받도록
 해보세요.
 """
+while True:
+    number_of_person = input("인원수를 입력하세요 : ")
+    try:
+        number_of_person = int(number_of_person)
+        if number_of_person > 0:
+            break
+    except:
+        print("인원수가 올바르지 않습니다. 다시 입력해 주세요.")
+while True:
+    number_of_pizza = input("피자수를 입력하세요 : ")
+    try:
+        number_of_pizza = int(number_of_pizza)
+        if number_of_pizza > 0:
+            break
+    except:
+        print("피자수가 올바르지 않습니다. 다시 입력해 주세요.")
+while True:
+    number_of_piece = input("한 피자당 조각 개수를 입력하세요 : ")
+    try:
+        number_of_piece = int(number_of_piece)
+        if number_of_piece > 0:
+            break
+    except:
+        print("한 피자당 조각 개수가 올바르지 않습니다. 다시 입력해 주세요.")
+
+piece_of_persion = (number_of_pizza * number_of_piece) // number_of_person
+number_of_extra_piece = (number_of_pizza * number_of_piece) % number_of_person
+
+format_string = "{} 명이서 피자 {} 개를 먹을 때\n한명당 {} 조각의 피자를 먹을 수 있습니다.\n남는 조각은 {} 개 입니다."
+message_string = format_string.format(number_of_person, number_of_pizza, piece_of_persion, number_of_extra_piece)
+print(message_string)
