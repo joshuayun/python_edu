@@ -15,7 +15,7 @@
 from datetime import datetime
 
 while True:
-    age = input("현재 나이를 입력하세요 :")
+    age = input("현재 나이를 입력하세요 : ")
     try:
         age = int(age)
         if age > 0:
@@ -23,7 +23,7 @@ while True:
     except:
         print("현재 나이가 올바르지 않습니다. 재입력하세요.")
 while True:
-    retire_age = input("퇴직을 원하는 나이를 입력하세요 :")
+    retire_age = input("퇴직을 원하는 나이를 입력하세요 : ")
     try:
         retire_age = int(retire_age)
         if retire_age > 0:
