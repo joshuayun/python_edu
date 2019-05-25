@@ -5,11 +5,14 @@
 # - 모든 값을 저장해 둔 다음에 정렬해서 찾기:
 
 # 변수의 초기화는 반복할 때마다 필요한 행위가 아니라면 반복문 밖에서 수행한다.
+
 total_score = 0
 avg_score = 0
 student_count = 0
+# 초기값 : max에는 최소값, min 에는 최고값으로 초기화를 한다.
 max_score = 0
 min_score = 0
+# 안전한 방법 : 초기화를 첫번째 입력된 값으로 한다.
 
 while True:
     print("____MENU____")
@@ -40,7 +43,7 @@ while True:
         total_score += score
     elif menu == "2":
         avg_score = total_score / student_count
-        print("점수 합계:", total_score, "점수 평균:", avg_score, "최고점:", max_score, "최저점:", min_score)
+        print("점수 합계:", total_score, "점수 평균:", avg_score, "최고점수:", max_score, "최저점수:", min_score)
     elif menu == "3":
         print("프로그램을 종료합니다.")
         exit()
