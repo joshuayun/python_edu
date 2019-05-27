@@ -19,8 +19,10 @@ while True:
 while len(games) < game_count:
     numbers = set()
     while len(numbers) < 6:
-        number = random.randint(1,45)
-        number.add(number)
-    if numbers in games:
+        number = random.randint(1, 45)
+        numbers.add(number)
+
+    # 현재 만들어진 게임을 games라는 리스트에 저장
+    if numbers not in games:
         games.append(numbers)
 print(games)
