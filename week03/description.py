@@ -5,3 +5,12 @@
 1. 예상 번호 캡처
 2. 로또 복권사진
 """
+while True:
+    try:
+        game_count = input("원하는 게임수를 입력하세요.: ")
+        game_count = int(game_count)
+        break
+    except:
+        print("게임수는 숫자로 입력하세요.")
+
+
